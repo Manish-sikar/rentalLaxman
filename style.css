@@ -4,6 +4,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-image: linear-gradient( rgb(247, 247, 240) ,#f78160);
 }
 .banner {
     position: relative;
@@ -18,7 +19,12 @@ body {
     text-align: center;
     z-index: 2;
 }
-.banner-content h1 {
+.banner-button {
+   display: flex;
+   justify-content: center;
+    z-index: 2;
+}
+.banner-content h1  {
     font-size: 3rem;
     color: #000;
     margin-bottom: 10px;
@@ -53,6 +59,28 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+    .card {
+      flex-direction: column;
+      
+    }
+    .card img {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+      flex-direction: column;
+    }
+    .card img {
+      width: 100%;
+    }
+    .card h2 {
+      font-size: 18px;
+    }
+  }
+
 
 
 .card {
@@ -61,7 +89,7 @@ body {
  border-bottom: 5px solid #fe4b19;
  padding: 20px;
  border-radius: 20px;
- width: 350px;
+ width: 300px  ;
  margin: 20px auto;
  font-family: Arial, sans-serif;
 }
@@ -116,4 +144,32 @@ letter-spacing:normal;
 }
 .filled {
     fill: gold;
+}
+
+.cardHeading b {
+    color: #d82222;
+    font-weight: 900;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 36px; /* Changed to a valid unit */
+}
+
+.cardHeading p {
+    color: #080606;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* whatsappp */
+.whatsapp-logo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; /* Ensure the logo is on top of the chat window */
+    color: #18ea57;
+}
+
+.whatsapp-logo i {
+    font-size:5cap;
+    color: #18ea57;
 }
